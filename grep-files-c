@@ -3,8 +3,8 @@
 # Date written: December 1, 2010
 # Date last changed: March 29, 2011
 
-# Grep files, case-insensitive.
-# Show case-insensitive matching files, excluding certain directories.
+# Grep files, case-sensitive.
+# Show case-sensitive matching files, excluding certain directories.
 # (Global regular expression print.)
 # Usage:
 #   grep-files-c <regexp>

@@ -7,4 +7,4 @@
 # Usage:
 #   mount-holmes
 
-sudo mount -t smbfs //holmes/Mark-share /mnt/holmes
+mount -t smbfs //holmes/Mark-share /mnt/holmes
