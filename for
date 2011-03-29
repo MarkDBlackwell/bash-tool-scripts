@@ -4,8 +4,9 @@
 # Date last changed: March 29, 2011
 
 # Usage:
-#   for <glob>
-# For example (assuming the existence of multiple executables, ./fu* ):
+#   for <shell glob>
+# Example usage:
+#   (This assumes the existence of multiple executables, ./fu* .)
 #   nano `for ./fu*`
 
 for arg in $@ ; do $arg ; done

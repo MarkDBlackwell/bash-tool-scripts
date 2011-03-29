@@ -1,8 +1,11 @@
 #!/bin/sh
 # Author: Mark D. Blackwell
 # Date written: November 5, 2010
-# Date last changed: November 26, 2010
+# Date last changed: March 29, 2011
 
+# Grep files.
+# Show matching files, excluding certain directories.
+# (Global regular expression print.)
 # Usage:
 #   grep-files <regexp>
 

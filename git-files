@@ -3,10 +3,12 @@
 # Date written: October 29, 2010
 # Date last changed: March 29, 2011
 
-# All files new or modified since the last commit.
-# Usage (in any directory under Git versioning):
+# Git files.
+# Show all files new or modified since the last commit.
+# Usage:
+#   (In any directory under Git versioning.)
 #   git-files
-# For example:
+# Example usage:
 #   nano `git-files`
 
 git-diff --name-only HEAD | sort

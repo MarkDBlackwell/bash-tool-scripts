@@ -3,24 +3,23 @@
 # Date written: October 21, 2010
 # Date last changed: March 29, 2011
 
+# Update SeaMonkey in a user directory.
+# Maybe SeaMonkey updates itself now.
+# This command, and SeaMonkey itself, should not be run as root. Thus your
+# SeaMonkey profile (the files in directory ~/.mozilla) will be writable by
+# your plugins, e.g. Noscript.
 # Usage:
-#   sm-install <Seamonkey version>
-
-# For example:
+#   sm-install <SeaMonkey version>
+# Example usage:
 #   sm-install 2.0.9
-
-# One then can run Seamonkey by:
+# Then to start SeaMonkey:
 #   sm
-
-# One can produce a Seamonkey download's md5 sum by the following example command:
+# Example to produce the MD5 sum:
 #   openssl dgst -md5 ~/Downloads/seamonkey-2.0.9.tar.bz2
-
-# This and Seamonkey should be run as a regular user (not root), in order that
-# files in the ~/.mozilla profile be writable by Noscript and other plugins.
 
 cd ~/seamonkey
 tar -xjf ~/Downloads/seamonkey-$1.tar.bz2
 mv seamonkey $1
-cd ~/t
+cd ~/tool-scripts
 echo "~/seamonkey/$1/seamonkey" > sm
 chmod u+x sm

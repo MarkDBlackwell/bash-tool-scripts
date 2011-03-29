@@ -1,10 +1,12 @@
 #!/bin/sh
 # Author: Mark D. Blackwell
 # Date written: November 5, 2010
-# Date last changed: November 20, 2010
+# Date last changed: March 29, 2011
+
+# Find files in directories.
 # Usage:
 #   files <directories>
-# For example:
+# Example usage:
 #   files test/* test/unit/helpers/*
 #   files app/views/*/[!_]*
 

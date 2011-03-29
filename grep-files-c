@@ -1,8 +1,11 @@
 #!/bin/sh
 # Author: Mark D. Blackwell
 # Date written: December 1, 2010
-# Date last changed: December 1, 2010
+# Date last changed: March 29, 2011
 
+# Grep files, case-insensitive.
+# Show case-insensitive matching files, excluding certain directories.
+# (Global regular expression print.)
 # Usage:
 #   grep-files-c <regexp>
 

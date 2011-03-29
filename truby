@@ -1,10 +1,13 @@
 #!/bin/sh
 # Author: Mark D. Blackwell
 # Date written: November 3, 2010
-# Date last changed: November 3, 2010
+# Date last changed: March 29, 2011
+
+# Test Ruby.
+# Run Test::Unit tests for multiple filenames matching a pattern.
 # Usage:
 #   truby '<extended glob file pattern>'
-# Usage example:
+# Example usage:
 #   truby 'fu*/ses*@(ed|sh)'
 #   truby 'fu*/sessions_con'
 

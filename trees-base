@@ -1,3 +1,17 @@
 #!/bin/sh
+# Author: Mark D. Blackwell
+# Date written: December 18, 2010
+# Date last changed: March 29, 2011
+
+# Trees base.
+# Find filenames which match a basename, and filenames in trees under directory
+# names which match the basename.
+# I think this doesn't work.
+# 
+# Usage:
+#   trees-base <base-name-expression>
+# Example usage:
+#   trees-base pic\*
+
 echo `~/t/trees $1`'
 '`~/t/base $1` | sort | uniq

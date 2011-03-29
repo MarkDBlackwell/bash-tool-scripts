@@ -1,9 +1,11 @@
 #!/usr/bin/env ruby
 # Author: Mark D. Blackwell
 # Date written: around November 1, 2010
-# Date last changed: November 25, 2010
-# Renames files.
+# Date last changed: March 29, 2011
+
+# Find and rename files.
 # Usage:
+#   (Change the values in OLD_NAME and NEW_NAME.)
 #   find-rename
 
 require 'find'

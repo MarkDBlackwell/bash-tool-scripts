@@ -3,9 +3,11 @@
 # Date written: December 29, 2010
 # Date last changed: March 29, 2011
 
+# Combine two filename generators for editing.
+# TODO: not working.
 # Usage:
 #   combine `<command>` [...]
-# Usage example:
+# Example usage:
 #   combine `pathr .*file_a.*` `grep-files filea`
 
 #for arg in $@ ; do echo $arg ; done | sort | uniq

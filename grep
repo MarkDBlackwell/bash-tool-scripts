@@ -1,8 +1,11 @@
 #!/bin/sh
 # Author: Mark D. Blackwell
 # Date written: October(?), 2010
-# Date last changed: November 22, 2010
+# Date last changed: March 29, 2011
 
+# Grep.
+# Show line numbers of matching strings, excluding certain directories.
+# (Global regular expression print.)
 # Usage:
 #   grep <regexp>
 

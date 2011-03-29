@@ -1,0 +1,11 @@
+#!/bin/sh
+# Author: Mark D. Blackwell
+# Date written: March 29, 2011
+# Date last changed: March 29, 2011
+
+# Disk usage.
+# (Show file space used.)
+# Usage:
+#   du <directories>
+
+du -hsx --time $@

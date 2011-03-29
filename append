@@ -1,12 +1,13 @@
 #!/bin/sh
 # Author: Mark D. Blackwell
-# Date written: Oct 21, 2010
-# Date last changed: Oct 21, 2010
+# Date written: October 21, 2010
+# Date last changed: March 29, 2011
 
-# Usage example (line numbers are one-indexed; source and destination
-# are files):
-# Append lines 2 through 3 of source onto destination:
-#
+# Append a file with lines from another.
+# (Line numbers are one-indexed. Source and destination are files.)
+# Usage:
+#   append <source> <first line>,<last line> <destination>
+# Example usage:
 #   append source 2,3 destination
 
 echo "$2 W $3" | ed -s $1

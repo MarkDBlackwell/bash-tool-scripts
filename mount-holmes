@@ -1,2 +1,10 @@
 #!/bin/sh
+# Author: Mark D. Blackwell
+# Date written: about November, 2010
+# Date last changed: March 29, 2011
+
+# Mount a certain Samba filesystem.
+# Usage:
+#   mount-holmes
+
 sudo mount -t smbfs //holmes/Mark-share /mnt/holmes
