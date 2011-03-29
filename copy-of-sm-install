@@ -1,0 +1,18 @@
+#!/bin/sh
+# Author: Mark D. Blackwell
+# Date written: Oct 21, 2010
+# Date last changed: Oct 21, 2010
+
+# Usage:
+#   sm-install <Seamonkey version>
+
+# For example:
+#   sm-install 2.0.9
+
+cd /usr/local/seamonkey
+sudo tar -xjf /home/mark/Downloads/seamonkey-$1.tar.bz2
+sudo mv seamonkey $1
+cd ~
+echo "/usr/local/seamonkey/$1/seamonkey" > sm
+chmod u+x sm
+

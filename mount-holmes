@@ -1,0 +1,1 @@
+mount -t smbfs //holmes/Mark-share /mnt/holmes
