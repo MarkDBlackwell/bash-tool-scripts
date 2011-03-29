@@ -1,18 +1,18 @@
 #!/bin/sh
 # Author: Mark D. Blackwell
 # Date written: December 29, 2010
-# Date last changed: December 29, 2010
+# Date last changed: March 29, 2011
 
 # Usage:
 #   combine `<command>` [...]
 # Usage example:
-#   combine `./pathr .*file_a.*` `./grep-files filea`
+#   combine `pathr .*file_a.*` `grep-files filea`
 
 #for arg in $@ ; do echo $arg ; done | sort | uniq
 #for arg in $@ ; do echo `$arg` ; done | sort | uniq
 #for arg in $@ ; do `echo $arg` ; done | sort | uniq
-#echo `./trees $1`'
-#'`./base $1` | sort | uniq
+#echo `~/t/trees $1`'
+#'`~/t/base $1` | sort | uniq
 #echo `for arg in $@ ; do `$arg'
 #'` ; done | sort | uniq
 echo 'Not working.'

@@ -1,2 +1,3 @@
-echo `./trees $1`'
-'`./base $1` | sort | uniq
+#!/bin/sh
+echo `~/t/trees $1`'
+'`~/t/base $1` | sort | uniq

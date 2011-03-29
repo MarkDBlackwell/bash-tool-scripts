@@ -1,6 +1,7 @@
+#!/bin/sh
 # Author: Mark D. Blackwell
 # Date written: January 27, 2011
-# Date last changed: January 28, 2011
+# Date last changed: March 29, 2011
 # Start forwarding TCP traffic, on input/output port 80, from one fixed IP address to another.
 # Usage:
 #   forward

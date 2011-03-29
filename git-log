@@ -1,1 +1,2 @@
+#!/bin/sh
 git log -n3 --pretty=oneline --abbrev-commit $@
