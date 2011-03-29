@@ -1,1 +1,1 @@
-mount -t smbfs //holmes/Mark-share /mnt/holmes
+sudo mount -t smbfs //holmes/Mark-share /mnt/holmes

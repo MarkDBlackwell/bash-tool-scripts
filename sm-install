@@ -1,7 +1,7 @@
 #!/bin/sh
 # Author: Mark D. Blackwell
 # Date written: October 21, 2010
-# Date last changed: November 5, 2010
+# Date last changed: March 29, 2011
 
 # Usage:
 #   sm-install <Seamonkey version>
@@ -10,7 +10,7 @@
 #   sm-install 2.0.9
 
 # One then can run Seamonkey by:
-#   ~/sm
+#   sm
 
 # One can produce a Seamonkey download's md5 sum by the following example command:
 #   openssl dgst -md5 ~/Downloads/seamonkey-2.0.9.tar.bz2
@@ -21,6 +21,6 @@
 cd ~/seamonkey
 tar -xjf ~/Downloads/seamonkey-$1.tar.bz2
 mv seamonkey $1
-cd ~
+cd ~/t
 echo "~/seamonkey/$1/seamonkey" > sm
 chmod u+x sm
