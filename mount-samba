@@ -1,0 +1,12 @@
+#!/bin/sh
+# Author: Mark D. Blackwell
+# Date written: about November, 2010
+# Date last changed: August 4, 2011
+# March 29, 2011
+# August 4, 2011: Parameterize computer name.
+
+# Mount a certain Samba filesystem.
+# Usage:
+#   mount-samba <computer name>
+
+mount -t smbfs //$1/Mark-share /mnt/$1
