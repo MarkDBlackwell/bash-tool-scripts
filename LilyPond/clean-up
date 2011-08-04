@@ -1,0 +1,3 @@
+#!/bin/sh
+rm -f book.ps
+git gc

@@ -1,0 +1,4 @@
+#!/bin/sh
+./clean-up
+git repack -a -d
+git prune-packed
