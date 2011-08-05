@@ -1,0 +1,24 @@
+#!/bin/sh
+# Author: Mark D. Blackwell
+# Date written: November 3, 2010
+# Date last changed: March 29, 2011
+
+# Test Ruby.
+# Run Test::Unit tests for multiple filenames matching a pattern.
+# Usage:
+#   truby '<extended glob file pattern>'
+# Example usage:
+#   truby 'fu*/ses*@(ed|sh)'
+#   truby 'fu*/sessions_con'
+
+function run_tests {
+  echo $@
+  echo $0 \($# suites\)
+  for arg do
+    ruby -Itest $arg
+  done
+}
+
+shopt -s extglob
+# Adding the right parenthesis here [ $@ or $1, \) or ")" ] didn't work.
+run_tests test/$@* 

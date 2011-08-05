@@ -1,0 +1,21 @@
+#!/bin/sh
+# Author: Mark D. Blackwell
+# Date written: October 21, 2010
+# Date last changed: March 29, 2011
+
+# Update SeaMonkey in root-owned directories.
+# I no longer use this, as I have SeaMonkey installed in a user directory.
+# Usage:
+#   root-sm-install <SeaMonkey version>
+# Example usage:
+#   root-sm-install 2.0.9
+# Then to start SeaMonkey:
+#   sm
+
+cd /usr/local/seamonkey
+sudo tar -xjf /home/mark/Downloads/seamonkey-$1.tar.bz2
+sudo mv seamonkey $1
+cd ~/tool-scripts
+echo "/usr/local/seamonkey/$1/seamonkey" > sm
+chmod u+x sm
+

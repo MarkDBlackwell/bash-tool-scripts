@@ -1,0 +1,11 @@
+#!/bin/sh
+# Author: Mark D. Blackwell
+# Date written: October 29, 2010
+# Date last changed: March 29, 2011
+
+# Git log.
+# Show the last few commits.
+# Usage (in any directory under Git versioning):
+#   git-log
+
+git log -n3 --pretty=oneline --abbrev-commit $@

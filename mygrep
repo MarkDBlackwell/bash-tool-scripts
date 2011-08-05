@@ -1,0 +1,8 @@
+grep \
+--exclude-dir .git \
+--context 10 \
+--files-with-matches \
+--ignore-case \
+--recursive \
+delete \
+.

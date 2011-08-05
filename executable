@@ -1,0 +1,11 @@
+#!/bin/sh
+# Author: Mark D. Blackwell
+# Date written: November 5, 2010
+# Date last changed: March 29, 2011
+
+# Find executable files.
+# TODO: Maybe use 'find -executable'.
+# Usage:
+#   executable
+
+find . -type f -perm -u+x

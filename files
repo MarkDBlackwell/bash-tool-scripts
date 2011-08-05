@@ -1,0 +1,13 @@
+#!/bin/sh
+# Author: Mark D. Blackwell
+# Date written: November 5, 2010
+# Date last changed: March 29, 2011
+
+# Find files in directories.
+# Usage:
+#   files <directories>
+# Example usage:
+#   files test/* test/unit/helpers/*
+#   files app/views/*/[!_]*
+
+find -P $@ -maxdepth 0 -name 'old-*' -prune -o -type f -exec `which ls` {} +

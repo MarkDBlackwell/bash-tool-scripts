@@ -1,0 +1,21 @@
+#!/bin/sh
+# Author: Mark D. Blackwell
+# Date written: December 29, 2010
+# Date last changed: March 29, 2011
+
+# Combine two filename generators for editing.
+# TODO: not working.
+# Usage:
+#   combine `<command>` [...]
+# Example usage:
+#   combine `pathr .*file_a.*` `grep-files filea`
+
+#for arg in $@ ; do echo $arg ; done | sort | uniq
+#for arg in $@ ; do echo `$arg` ; done | sort | uniq
+#for arg in $@ ; do `echo $arg` ; done | sort | uniq
+#echo `~/t/trees $1`'
+#'`~/t/base $1` | sort | uniq
+#echo `for arg in $@ ; do `$arg'
+#'` ; done | sort | uniq
+echo 'Not working.'
+

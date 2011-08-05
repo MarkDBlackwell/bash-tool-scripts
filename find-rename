@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+# Author: Mark D. Blackwell
+# Date written: around November 1, 2010
+# Date last changed: March 29, 2011
+
+# Find and rename files.
+# Usage:
+#   (Change the values in OLD_NAME and NEW_NAME.)
+#   find-rename
+
+require 'find'
+require 'fileutils'
+OLD_NAME='shared.rb'
+NEW_NAME='_shared.rb'
+Find.find([Dir.pwd,'test'].join '/') do |path|
+  b=File.basename(path)
+  Find.prune if FileTest.directory?(path) && ?.==b[0]
+  if OLD_NAME==b
+    FileUtils.cd(File.dirname(path)) do
+       print "cd #{Dir.pwd}\n"
+       print "git mv #{b} #{NEW_NAME}\n"
+    end
+  end
+end
