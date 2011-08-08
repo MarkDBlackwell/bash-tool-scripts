@@ -1,46 +1,63 @@
-# Author: Mark D. Blackwell
-# Date written: January 31, 2011
-# Date last changed: January 31, 2011
-# Source: manual page bash(1), September 28, 2006.
-# Usage: Cheat sheet for Debian GNU Bash command line manipulation (on IBM PC
-#   keyboards).
+Author: Mark D. Blackwell
+Change dates:
+mdb January 31, 2011 created
+mdb August 6, 2011: improve formatting
+
+Title: Bash Cheat Sheet
+
+Purpose: Cheat sheet for using the Debian GNU Bash command line on IBM 
+PC compatible keyboards.
+
+Source: Bash (1) man(ual) page, dated September 28, 2006.
+
 #-------------
-With IBM PC-compatible keyboards, Bash-related keys are:
-'C-' - Ctrl (left or right)
-'M-' - left Alt
-'Rubout' - Backspace
-'newline, return' - Enter
-'home'(?) - Home
+INRODUCTION
+
+The names and abbreviations of the keyboard keys referred to in GNU Bash 
+documentation, and the names on IBM PC-compatible keyboards, if they 
+differ:
+(C-) - left or right Ctrl
+(M-) - left Alt
+(newline) - Enter
+(rubout) - Backspace
 #-------------
-READLINE (section):
-Readline key bindings:
-By default, $INPUTRC is not set and ~/.inputrc does not exist, so default key
-bindings are in effect.
+Using READLINE
+
+For new-ish users, the following are the key bindings for Readline, 
+since by default, neither ~/.inputrc nor environment variable $INPUTRC 
+would exist.
+
 Searching:
-('home', newline) - terminate search
-Commands for moving:
+(home, newline) - Either key will terminate a search.
+
+Moving:
 (C-a) - beginning-of-line
 (C-e) - end-of-line
 (M-f) - forward-word
 (M-b) - backword-word
 (C-l) - clear-screen
-Commands for manipulating the history:
+
+Manipulating the history:
 (C-r) - reverse-search-history
-(M-C-y) - yank-nth-arg (See Numeric arguments, below.)
-Commands for changing text:
+(M-C-y) - yank-nth-arg (see numeric arguments, below.)
+
+Changing text:
 (C-q, C-v) - quoted-insert
 (M-t) - transpose-words
+
 Killing and yanking:
 (C-k) - kill-line
-(C-x Rubout) - backward-kill-line
+(C-x rubout) - backward-kill-line
 (M-d) - kill-word
-(M-Rubout) - backward-kill-word
+(M-rubout) - backward-kill-word
 (C-y) - yank
 (M-y) - yank-pop (following yank)
+
 Numeric arguments:
 (M-0, M-1, M--) - digit-argument
+
 Completing:
-(TAB) - complete
+(tab) - complete
 (M-?) - possible-completions
 (M-/ M-/) - complete-filename (like glob-complete-word)
 (C-x /) - possible-filename-completions
@@ -50,22 +67,27 @@ Completing:
 (C-x @) - possible-hostname-completions
 (M-! M-!) - complete-command
 (C-x !) - possible-command-completions
-(M-TAB) - dynamic-complete-history
+(M-tab) - dynamic-complete-history
+
 Miscellaneous:
 (C-_) - undo
 (M-g) - glob-complete-word (like complete-filename)
 (C-x C-v) - display-shell-version
+
 #-------------
-HISTORY EXPANSION (section):
+Using HISTORY EXPANSION
+
 Event designators:
 (!) - start a history substitution
 (!-n) - nth previous command
 (!string) - most recent command starting with string
 (!?string?, !?string) - most recent command containing string
 (^string^string^) - quick substition in last command
-(Examples):
-(!!) - last command
+
+Event designator examples:
+(!!) [(!-1)] - last command
 (!-2) - command previous to last
+
 Word designators:
 (:) - start (sometimes omitted)
 (0) - command word
@@ -78,12 +100,13 @@ Word designators:
 (*) - all arguments
 (x*) - like (x-$)
 (x-) - like (x-$) but omits the last word
-(Examples):
-(!^) - last command's first argument
+
+Word designator (combined) examples:
+(!^) [(!:^) (!:1) (!-1^) (!-1:1)] - last command's first argument
 (!:2) - last command's second argument
-(!$) - last command's last argument
-(!*) - all arguments of last command
-(!!-) - all words of last command but the last
+(!$) [(!:$) (!-1$) (!-1:$)] - last command's last argument
+(!*) [(!:*) (!-1*) (!-1:*)] - all arguments of last command
+(!!-) [(!!:-) (!-1-) (!-1:-)] - all words of last command but the last
 (!:-1 !:3-4 !:6*) - last command, dropping the second and fifth arguments
 (!-2^) - second previous command's first argument
 (!-2:2) - second previous command's second argument
@@ -92,4 +115,4 @@ Word designators:
 (!%) - word matched by most recent ?string? search
 (!-3:0 !*) - third previous command word and last command's arguments
 (!-2:0 !:3* !-2$) - second previous command word plus its last argument, the
- last command's third and following arguments intervening
+    last command's third and following arguments intervening

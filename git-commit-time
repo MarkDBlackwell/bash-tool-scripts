@@ -1,0 +1,53 @@
+#!/c/progra/ruby/bin/ruby.exe
+=begin
+Author: Mark D. Blackwell
+Change dates:
+mdb August 7, 2011: created.
+Works in Git Bash on Microsoft Windows XP.
+Purpose: 
+Below the current directory, show all Git repositories' latest commit times.
+Usage example:
+  cd develop; git-commit-time
+=end
+
+BEFORE_FIRST_CHARACTER_IF_NIL = -1
+CHARACTER_BEFORE_COMMIT_TIME = ':'
+CURRENT_DIRECTORY_PER_RUBY = Dir.pwd
+DIRECTORY_SEPARATOR = '/'
+EMPTY_STRING = String.new
+GIT_LOG_COMMAND = 'git log -n1 --pretty=medium --date=relative'
+INDEX_OF_LINE_CONTAINING_TIME = 2
+INDEX_THROUGH_END_OF_STRINGS = -1
+NEWLINE = "\n"
+SPACING_DASH = ' - '
+START_OF_GIT_BASH_PATHS = '/c'
+START_OF_WINDOWS_PATHS = 'c:'
+UNWANTED_REPOSITORY_PATH_SUFFIx = '/.git'
+
+CURRENT_DIRECTORY_PER_GIT_BASH = CURRENT_DIRECTORY_PER_RUBY.sub START_OF_WINDOWS_PATHS, START_OF_GIT_BASH_PATHS
+FIND_ALL_GIT_DIRECTORIES_COMMAND = %Q@find #{CURRENT_DIRECTORY_PER_GIT_BASH} -name .git -print@
+ALL_GIT_DIRECTORY_PATHS = %x@#{FIND_ALL_GIT_DIRECTORIES_COMMAND}@
+
+def drop_beginning line; ((line.index CHARACTER_BEFORE_COMMIT_TIME) || BEFORE_FIRST_CHARACTER_IF_NIL).succ end
+
+def latest_git_log_entry; %x@#{GIT_LOG_COMMAND}@ end
+
+def relative_path full; full.sub "#{CURRENT_DIRECTORY_PER_GIT_BASH}#{DIRECTORY_SEPARATOR}", EMPTY_STRING end
+
+def repository path; "#{path.chomp UNWANTED_REPOSITORY_PATH_SUFFIx}#{SPACING_DASH}" end
+
+def switch_to path; Dir.chdir path.sub START_OF_GIT_BASH_PATHS, EMPTY_STRING end
+
+# Depend on other methods:
+
+def commit_time line; line.slice((drop_beginning line)..INDEX_THROUGH_END_OF_STRINGS).strip end
+
+def latest_time_container; (latest_git_log_entry.split NEWLINE).at INDEX_OF_LINE_CONTAINING_TIME end
+
+(ALL_GIT_DIRECTORY_PATHS.split NEWLINE).each do |path|
+  switch_to path
+  print relative_path repository path
+  line = latest_time_container
+  print commit_time line unless line.nil?
+  print NEWLINE
+end
