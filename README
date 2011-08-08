@@ -1,4 +1,7 @@
-These are GNU Bash scripts, which help in developing software on Debian and Cygwin.
+These are GNU Bash scripts, which help in developing software on Debian 
+and Cygwin.
 
-They complement nano, Debian's recommended text editor. Though simple, nano is capable 
-of performing functions on multiple files, such as cut & paste, and search & replace.
+They complement nano, Debian's recommended text editor. Nano, though 
+simple, works with multiple files while cutting & pasting, and searching & 
+replacing. Like Emacs, it uses Bash-like keyboard shortcuts (see 
+bash-cheat-sheet.txt).
