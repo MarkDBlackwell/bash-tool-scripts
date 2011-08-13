@@ -2,6 +2,7 @@ Author: Mark D. Blackwell
 Change dates:
 mdb January 31, 2011 created
 mdb August 6, 2011: improve formatting
+mdb August 13, 2011: small fixes
 
 Title: Bash Cheat Sheet
 
@@ -101,18 +102,33 @@ Word designators:
 (x*) - like (x-$)
 (x-) - like (x-$) but omits the last word
 
-Word designator (combined) examples:
-(!^) [(!:^) (!:1) (!-1^) (!-1:1)] - last command's first argument
-(!:2) - last command's second argument
-(!$) [(!:$) (!-1$) (!-1:$)] - last command's last argument
-(!*) [(!:*) (!-1*) (!-1:*)] - all arguments of last command
-(!!-) [(!!:-) (!-1-) (!-1:-)] - all words of last command but the last
-(!:-1 !:3-4 !:6*) - last command, dropping the second and fifth arguments
-(!-2^) - second previous command's first argument
-(!-2:2) - second previous command's second argument
-(!-2$) - second previous command's last argument
-(!-2*) - all arguments of second previous command
+Event/word designator (combined) examples (hypothesizing relevent command, 'a b c d e f g'):
+
+o Last command:
+(!!) [(!-1) (!:0*) (!!:0*) (!-1:0*)] - last command - a b c d e f g
+(!:2) [(!!:2) (!-1:2)] - last command's second argument - c
+(!:1-2) [(!!:1-2) (!-1:1-2)] - last commands's first and second arguments - b c
+(!$) [(!!$) (!-1$) (!:$) (!!:$) (!-1:$)] - last command's last argument - g
+(!^) [(!!^) (!-1^) (!:^) (!!:^) (!-1:^) (!:1) (!!:1) (!-1:1)] - last command's first argument - b
+(!*) [(!!*) (!-1*) (!:*) (!!:*) (!-1:*) (!:1*) (!!:1*) (!-1:1*)] - all arguments of last command - b c d e f g
+(!!-2) [(!:-2) (!!:-2) (!-1:-2) (!:0-2) (!!:0-2) (!-1:0-2)] - last command, through the second argument - a b c
+(!!-) [(!-1-) (!:-) (!!:-) (!-1:-) (!:0-) (!!:0-) (!-1:0-)] - last command, dropping the last argument - a b c d e f
+(!:-1 !:3-4 !:6*) - last command, dropping the second and fifth arguments - a b d e g
+
+o Second previous command:
+(!-2) [(!-2:0*)] - second previous command - a b c d e f g
+(!-2:2) - second previous command's second argument - c
+(!-2:1-2) - second previous commands's first and second arguments - b c
+(!-2$) [(!-2:$)] - second previous command's last argument - g
+(!-2^) [(!-2:^) (!-2:1)] - second previous command's first argument - b
+(!-2*) [(!-2:*) (!-2:1*)] - all arguments of the second previous command - b c d e f g
+(!-3:0 !*) - third previous command word and last command's arguments - q b c d e f g
+
+o Previous commands combined:
+(!-2:0 !:3* !-2$) - second previous command word plus its last argument, the last command's third and
+    following arguments intervening - q d e f g z
+(!-2:0 !:3* !-2:2) - second previous command word plus its second argument, the last command's third and
+    following arguments intervening - q d e f g s
+
+o String search:
 (!%) - word matched by most recent ?string? search
-(!-3:0 !*) - third previous command word and last command's arguments
-(!-2:0 !:3* !-2$) - second previous command word plus its last argument, the
-    last command's third and following arguments intervening
