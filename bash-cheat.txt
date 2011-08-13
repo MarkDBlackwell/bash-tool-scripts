@@ -24,29 +24,29 @@ differ:
 #-------------
 Using READLINE
 
-For new-ish users, the following are the key bindings for Readline, 
+For newish users, the following are the key bindings for Readline, 
 since by default, neither ~/.inputrc nor environment variable $INPUTRC 
 would exist.
 
-Searching:
+Search:
 (home, newline) - Either key will terminate a search.
 
-Moving:
+Move the cursor:
 (C-a) - beginning-of-line
 (C-e) - end-of-line
 (M-f) - forward-word
-(M-b) - backword-word
+(M-b) - backward-word
 (C-l) - clear-screen
 
-Manipulating the history:
+Manipulate history:
 (C-r) - reverse-search-history
 (M-C-y) - yank-nth-arg (see numeric arguments, below.)
 
-Changing text:
+Change text:
 (C-q, C-v) - quoted-insert
 (M-t) - transpose-words
 
-Killing and yanking:
+Kill and yank:
 (C-k) - kill-line
 (C-x rubout) - backward-kill-line
 (M-d) - kill-word
@@ -59,8 +59,9 @@ Numeric arguments:
 
 Completing:
 (tab) - complete
+(M-/ M-/) - complete-filename
+(M-g) - glob-complete-word
 (M-?) - possible-completions
-(M-/ M-/) - complete-filename (like glob-complete-word)
 (C-x /) - possible-filename-completions
 (M-$ M-$) - complete-variable
 (C-x $) - possible-variable-completions
@@ -72,7 +73,6 @@ Completing:
 
 Miscellaneous:
 (C-_) - undo
-(M-g) - glob-complete-word (like complete-filename)
 (C-x C-v) - display-shell-version
 
 #-------------
