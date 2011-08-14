@@ -3,6 +3,7 @@
 # Change dates:
 # mdb August 14, 2011 create
 # Purpose: check GitHub for differences
-# Usage: get-fetch
+# Usage:
+#   git-fetch <directory path>
 
-if cd ~/$1; then pwd; git fetch origin master; git merge FETCH_HEAD; fi
+if cd $1; then pwd; git fetch origin master; git merge FETCH_HEAD; fi
