@@ -1,0 +1,9 @@
+#!/bin/bash
+# Author: Mark D. Blackwell
+# Change dates:
+# mdb August 14, 2011 create
+# Purpose: check Git status
+# Usage:
+#   git-status <directory path>
+
+if cd $1; then pwd; git status; fi
