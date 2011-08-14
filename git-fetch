@@ -5,4 +5,4 @@
 # Purpose: check GitHub for differences
 # Usage: get-fetch
 
-cd ~/$1; git fetch origin master; git merge FETCH_HEAD
+if cd ~/$1; then pwd; git fetch origin master; git merge FETCH_HEAD; fi
