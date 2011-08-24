@@ -1,7 +1,9 @@
 #!/bin/sh
 # Author: Mark D. Blackwell
 # Date written: October 29, 2010
-# Date last changed: March 29, 2011
+# Change dates:
+# mdb March 29, 2011
+# mdb August 24, 2011 For Cygwin, change git-diff to git diff.
 
 # Git files.
 # Show all files new or modified since the last commit.
@@ -11,4 +13,4 @@
 # Example usage:
 #   nano `git-files`
 
-git-diff --name-only HEAD | sort
+git diff --name-only HEAD | sort
