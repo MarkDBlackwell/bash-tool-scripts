@@ -1,22 +1,34 @@
 #!/bin/sh
 # Author: Mark D. Blackwell
 # Date written: October(?), 2010
-# Date last changed: April 2, 2011
+# Changed:
+# (mdb) 2011-04-02
+# (mdb) 2012-02-03 - allow unlimited output; exclude directory, 'old'; add optional args
+# (mdb) 2012-02-07 - move directory back; not use 'regexp='; mention fixed strings; mention -im options
 
 # Grep.
-# Show line numbers of matching strings, excluding certain directories.
 # (Global regular expression print.)
+# Show line numbers of matching strings, excluding certain directories.
+# To increase the number of per-file hits, add -m option.
+# To ignore case, add -i option.
 # Usage:
-#   grep <regexp>
+#   grep  <regex>
+#   grep abc -im 100
+#   grep '&&'
+#   grep '\|\|'
 
-grep . --exclude=*\.sqlite3 \
+grep \
+--exclude=*\.sqlite3 \
 --exclude-dir=\.git \
 --exclude-dir=db \
 --exclude-dir=javascripts \
 --exclude-dir=log \
 --exclude-dir=migrate \
+--exclude-dir=old \
 --exclude-dir=out \
 --exclude-dir=vendor \
---ignore-case \
---recursive --line-number --max-count=1 --regexp=$1 | head
-# By hand:  grep <directory> -m 1 -inre <regexp>
+--recursive --line-number --max-count=1 \
+--extended-regexp $1 \
+$2 $3 $4 .
+# By hand:  grep -rnE <regex> <directory>
+# or:       grep -m 100 -irnF <fixed string> <directory>

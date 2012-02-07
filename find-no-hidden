@@ -1,0 +1,12 @@
+#!/bin/sh
+# Author: Mark D. Blackwell
+# Date written: January(?), 2012
+# Changed:
+# (mdb) 2012-02-07 - added documentation.
+
+# Find no hidden.
+# Recursively finds, outside hidden directories such as '.git', all (non-directory) files.
+# Usage:
+#   find-no-hidden
+
+find * -type f

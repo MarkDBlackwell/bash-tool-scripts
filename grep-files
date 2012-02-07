@@ -1,22 +1,33 @@
 #!/bin/sh
 # Author: Mark D. Blackwell
 # Date written: November 5, 2010
-# Date last changed: March 29, 2011
+# Changed:
+# (mdb) 2011-03-29
+# (mdb) 2012-02-03 - exclude directory, 'old'; add optional args; move directory
+# (mdb) 2012-02-07 - move directory back; not use 'regexp='; mention fixed strings; mention -i option
 
 # Grep files.
-# Show matching files, excluding certain directories.
 # (Global regular expression print.)
+# Show matching files, excluding certain directories.
+# To ignore case, add -i option.
 # Usage:
-#   grep-files <regexp>
+#   grep-files <regex>
+#   grep-files abc -i
+#   grep-files '&&'
+#   grep-files '\|\|'
 
-grep --exclude=*\.sqlite3 \
+grep \
+--exclude=*\.sqlite3 \
 --exclude-dir=\.git \
 --exclude-dir=db \
 --exclude-dir=javascripts \
 --exclude-dir=log \
 --exclude-dir=migrate \
+--exclude-dir=old \
 --exclude-dir=out \
 --exclude-dir=vendor \
---ignore-case \
---recursive --files-with-matches --regexp=$1 . | sort
-# By hand:  grep -irle <regexp> <directory> | sort
+--recursive --files-with-matches \
+--extended-regexp $1 \
+$2 $3 $4 . | sort
+# By hand:  grep -rlE <regex> <directory>
+# or:       grep -irlF <fixed string> <directory> | sort
