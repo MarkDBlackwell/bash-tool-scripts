@@ -5,3 +5,5 @@ They complement nano, Debian's recommended text editor. Nano, though
 simple, works with multiple files while cutting & pasting, and searching & 
 replacing. Like Emacs, it uses Bash-like keyboard shortcuts (see 
 bash-cheat-sheet.txt).
+
+Copyright (c) 2011 Mark D. Blackwell. See [MIT-LICENSE](MIT-LICENSE) for details.
