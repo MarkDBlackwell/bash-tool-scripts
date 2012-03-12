@@ -26,6 +26,7 @@ grep \
 --exclude-dir=migrate \
 --exclude-dir=old \
 --exclude-dir=out \
+--exclude-dir=public/assets \
 --exclude-dir=vendor \
 --recursive --line-number --max-count=1 \
 --extended-regexp $1 \

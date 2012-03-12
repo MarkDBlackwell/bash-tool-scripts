@@ -25,6 +25,7 @@ grep \
 --exclude-dir=migrate \
 --exclude-dir=old \
 --exclude-dir=out \
+--exclude-dir=public/assets \
 --exclude-dir=vendor \
 --recursive --files-with-matches \
 --extended-regexp $1 \
