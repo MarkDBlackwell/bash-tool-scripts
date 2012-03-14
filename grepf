@@ -5,16 +5,17 @@
 # (mdb) 2011-03-29
 # (mdb) 2012-02-03 - exclude directory, 'old'; add optional args; move directory
 # (mdb) 2012-02-07 - move directory back; not use 'regexp='; mention fixed strings; mention -i option
+# (mdb) 2012-03-14 - rename from grep-files; exclude public/assets
 
 # Grep files.
 # (Global regular expression print.)
 # Show matching files, excluding certain directories.
 # To ignore case, add -i option.
 # Usage:
-#   grep-files <regex>
-#   grep-files abc -i
-#   grep-files '&&'
-#   grep-files '\|\|'
+#   grepf <regex>
+#   grepf abc -i
+#   grepf '&&'
+#   grepf '\|\|'
 
 grep \
 --exclude=*\.sqlite3 \
