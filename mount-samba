@@ -1,9 +1,11 @@
 #!/bin/sh
 # Author: Mark D. Blackwell
-# Date written: about November, 2010
-# Date last changed: August 4, 2011
-# March 29, 2011
-# August 4, 2011: Parameterize computer name.
+# Change dates:
+# (mdb) about November, 2010 - created.
+# (mdb) 3-29-2011
+# (mdb) 8-04-2011 - parameterize computer name.
+# (mdb) 3-16-2011 - change to smbclient
+
 
 # Mount a certain Samba filesystem.
 # Usage:
@@ -16,4 +18,8 @@
 # smbclient -U {Windows username} //{computer name}/Mark-share
 # smbclient -U Mark //holmes/Mark-share
 # You will be prompted for Mark's (Windows) password.
+Old:
+# mount -t smbfs //$1/Mark-share /mnt/$1
+
+smbclient -U Mark //$1/Mark-share /mnt/$1
 
