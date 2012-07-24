@@ -9,4 +9,11 @@
 # Usage:
 #   mount-samba <computer name>
 
-mount -t smbfs //$1/Mark-share /mnt/$1
+# This doesn't work on Debian squeeze:
+# mount -t smbfs //$1/Mark-share /mnt/$1
+
+# Instead, use:
+# smbclient -U {Windows username} //{computer name}/Mark-share
+# smbclient -U Mark //holmes/Mark-share
+# You will be prompted for Mark's (Windows) password.
+
