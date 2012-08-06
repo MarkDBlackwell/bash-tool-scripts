@@ -18,7 +18,7 @@
 # smbclient -U {Windows username} //{computer name}/Mark-share
 # smbclient -U Mark //holmes/Mark-share
 # You will be prompted for Mark's (Windows) password.
-Old:
+# Old:
 # mount -t smbfs //$1/Mark-share /mnt/$1
 
 smbclient -U Mark //$1/Mark-share /mnt/$1

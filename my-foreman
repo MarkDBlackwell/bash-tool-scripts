@@ -1,0 +1,7 @@
+environment=$1
+shift 1
+
+export DATABASE_URL=\
+postgres://$DATABASE_USERNAME:$DATABASE_PASSWORD@\
+localhost:5432/$DATABASE_USERNAME'_'$environment
+foreman start $@
