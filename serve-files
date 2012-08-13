@@ -17,6 +17,11 @@ puts "#{s} #{ARGV.join ' '}"
 
 puts "Running Ruby #{RUBY_VERSION}"
 
+## /sbin/ifconfig eth0 | grep 'inet addr'
+
+s = %x@ /sbin/ifconfig eth0 | grep 'inet addr' @
+puts s
+
 include WEBrick
 
 options = {
