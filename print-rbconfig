@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+=begin
+Author: Mark D. Blackwell
+Change dates:
+(mdb) August 11, 2012 - create
+
+Print Ruby configuration information.
+
+Tested on Ruby 1.9.3.
+=end
+
+require 'json'
+
+s = $0 # Program name.
+puts print "#{s} #{ARGV.join ' '}"
+
+puts "Running Ruby #{RUBY_VERSION}"
+puts
+
+RbConfig::CONFIG.sort.each{|e| puts Hash[*e].to_json}

@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+=begin
+Author: Mark D. Blackwell
+Change dates:
+(mdb) August 11, 2012 - create
+
+Derived from:
+http://microjet.ath.cx/webrickguide/html/What_is_WEBrick.html
+
+Serve files.
+=end
+
+require 'webrick'
+
+s = $0 # Program name.
+puts "#{s} #{ARGV.join ' '}"
+
+puts "Running Ruby #{RUBY_VERSION}"
+
+include WEBrick
+
+options = {
+  :BindAddress => '0.0.0.0',
+  :Port => 3000,
+  :DocumentRoot => Dir.pwd,
+}
+server = WEBrick::HTTPServer.new options
+
+%w[INT TERM].each{|e| trap(e){server.shutdown}}
+
+server.start
