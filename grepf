@@ -5,7 +5,7 @@
 # (mdb) 2011-03-29
 # (mdb) 2012-02-03 - exclude directory, 'old'; add optional args; move directory
 # (mdb) 2012-02-07 - move directory back; not use 'regexp='; mention fixed strings; mention -i option
-# (mdb) 2012-03-14 - rename from grep-files; exclude public/assets
+# (mdb) 2012-08-18 - exclude tmp; add regex example
 
 # Grep files.
 # (Global regular expression print.)
@@ -16,6 +16,7 @@
 #   grepf abc -i
 #   grepf '&&'
 #   grepf '\|\|'
+#   grepf 'work|play'
 
 grep \
 --exclude=*\.sqlite3 \
@@ -27,6 +28,7 @@ grep \
 --exclude-dir=old \
 --exclude-dir=out \
 --exclude-dir=public/assets \
+--exclude-dir=tmp \
 --exclude-dir=vendor \
 --recursive --files-with-matches \
 --extended-regexp $1 \

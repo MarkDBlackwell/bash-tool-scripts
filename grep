@@ -5,6 +5,7 @@
 # (mdb) 2011-04-02
 # (mdb) 2012-02-03 - allow unlimited output; exclude directory, 'old'; add optional args
 # (mdb) 2012-02-07 - move directory back; not use 'regexp='; mention fixed strings; mention -im options
+# (mdb) 2012-08-18 - exclude tmp; add regex example
 
 # Grep.
 # (Global regular expression print.)
@@ -16,6 +17,7 @@
 #   grep abc -im 100
 #   grep '&&'
 #   grep '\|\|'
+#   grep 'work|play'
 
 grep \
 --exclude=*\.sqlite3 \
@@ -27,6 +29,7 @@ grep \
 --exclude-dir=old \
 --exclude-dir=out \
 --exclude-dir=public/assets \
+--exclude-dir=tmp \
 --exclude-dir=vendor \
 --recursive --line-number --max-count=1 \
 --extended-regexp $1 \
