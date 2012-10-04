@@ -6,6 +6,7 @@
 # (mdb) 2012-02-03 - allow unlimited output; exclude directory, 'old'; add optional args
 # (mdb) 2012-02-07 - move directory back; not use 'regexp='; mention fixed strings; mention -im options
 # (mdb) 2012-08-18 - exclude tmp; add regex example
+# (mdb) 2012-09-09 - improve exclusions
 
 # Grep.
 # (Global regular expression print.)
@@ -22,13 +23,11 @@
 grep \
 --exclude=*\.sqlite3 \
 --exclude-dir=\.git \
---exclude-dir=db \
---exclude-dir=javascripts \
 --exclude-dir=log \
 --exclude-dir=migrate \
 --exclude-dir=old \
 --exclude-dir=out \
---exclude-dir=public/assets \
+--exclude-dir=public \
 --exclude-dir=tmp \
 --exclude-dir=vendor \
 --recursive --line-number --max-count=1 \
