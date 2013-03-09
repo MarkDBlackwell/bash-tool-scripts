@@ -7,5 +7,7 @@
 # Usage:
 #   find-not
 
+# Implicitly, the regular expression includes both filename ends (without ^$).
+
 # Example (to find un-minified (not -.min.css) CSS files:
-# find * -regex '.+[^n]\.css$'
+# find * -regex '.+[^n]\.css'
