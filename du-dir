@@ -1,0 +1,12 @@
+#!/bin/sh
+# Author: Mark D. Blackwell
+# Date written: February 27, 2013
+# Date last changed: February 27, 2013
+
+# Disk utilization, single directories.
+# Use sudo
+# First do:
+#  df -i
+# Also maybe do:
+#  df -l
+du -hc --max-depth=1

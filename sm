@@ -1,2 +1,11 @@
-#!/bin/bash
+#!/bin/sh
+# Author: Mark D. Blackwell
+# Date written: October 21, 2010
+# Date changed: March 29, 2011
+# Date changed: August 6, 2011
+
+# SeaMonkey.
+# Usage:
+#    sm
+
 ~/seamonkey/current/seamonkey $@

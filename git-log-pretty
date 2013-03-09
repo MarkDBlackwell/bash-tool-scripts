@@ -1,0 +1,11 @@
+#!/bin/sh
+# Author: Mark D. Blackwell
+# Date written: December 19, 2012
+# Date last changed: December 19, 2012
+
+# Git log, pretty.
+# Show all the commits, for client to read.
+# Usage (in any directory under Git versioning):
+#   git-log-pretty
+
+git log --pretty=medium --abbrev-commit --name-status --date=short

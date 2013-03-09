@@ -1,0 +1,9 @@
+#!/bin/sh
+# Author: Mark D. Blackwell
+# Date written: February 27, 2013
+# Date last changed: February 27, 2013
+
+# Using Git, filter editor artifacts.
+# See http://git-scm.com/book/ch6-4.html
+# Example:
+# git filter-branch --tree-filter "find * -type f -name '*~' -delete" HEAD

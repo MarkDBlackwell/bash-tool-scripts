@@ -1,0 +1,8 @@
+#!/bin/sh
+# Author: Mark D. Blackwell
+# Date written: February 18, 2013
+# Date last changed: February 18, 2013
+
+# Sublime text editor.
+
+~/progra/sublime-text-2/sublime_text $@
