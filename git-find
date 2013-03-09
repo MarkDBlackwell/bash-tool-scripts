@@ -1,2 +1,3 @@
+#!/bin/sh
 # Example: git-find '*.rb'
 git filter-branch --tree-filter "find * -name '$1'"

@@ -1,3 +1,4 @@
+#!/bin/sh
 environment=$1
 shift 1
 

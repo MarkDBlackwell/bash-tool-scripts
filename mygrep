@@ -1,3 +1,4 @@
+#!/bin/sh
 grep \
 --exclude-dir .git \
 --context 10 \

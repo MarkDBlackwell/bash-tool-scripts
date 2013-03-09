@@ -1,2 +1,3 @@
+#!/bin/sh
 # Example:
 # cd ~; ln -si --no-dereference target-directory ~/link-name

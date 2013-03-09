@@ -1,0 +1,11 @@
+#!/bin/sh
+# Author: Mark D. Blackwell
+# Change dates:
+# (mdb) 2013-03-09 - created
+
+# Find not.
+# Usage:
+#   find-not
+
+# Example (to find un-minified (not -.min.css) CSS files:
+# find * -regex '.+[^n]\.css$'
