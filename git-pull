@@ -1,8 +1,9 @@
 #!/bin/sh
 # Author: Mark D. Blackwell
 # Change dates:
-# mdb August 14, 2011 create
-# mdb August 16, 2011 use pull instead of fetch & merge FETCH_HEAD
+# mdb August 14, 2011 - create.
+# mdb August 16, 2011 - use pull instead of fetch & merge FETCH_HEAD.
+#
 # Purpose: check GitHub for differences
 # Usage:
 #   git-fetch <directory path>

@@ -7,7 +7,7 @@
 # Find filenames which match a basename, and filenames in trees under directory
 # names which match the basename.
 # I think this doesn't work.
-# 
+#
 # Usage:
 #   trees-base <base-name-expression>
 # Example usage:

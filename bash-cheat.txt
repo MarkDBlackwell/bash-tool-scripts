@@ -1,12 +1,12 @@
 Author: Mark D. Blackwell
 Change dates:
-mdb January 31, 2011 created
-mdb August 6, 2011: improve formatting
-mdb August 13, 2011: small fixes
+mdb January 31, 2011 - create.
+mdb August 6, 2011 - improve formatting.
+mdb August 13, 2011 - small fixes.
 
 Title: Bash Cheat Sheet
 
-Purpose: Cheat sheet for using the Debian GNU Bash command line on IBM 
+Purpose: Cheat sheet for using the Debian GNU Bash command line on IBM
 PC compatible keyboards.
 
 Source: Bash (1) man(ual) page, dated September 28, 2006.
@@ -14,8 +14,8 @@ Source: Bash (1) man(ual) page, dated September 28, 2006.
 #-------------
 INRODUCTION
 
-The names and abbreviations of the keyboard keys referred to in GNU Bash 
-documentation, and the names on IBM PC-compatible keyboards, if they 
+The names and abbreviations of the keyboard keys referred to in GNU Bash
+documentation, and the names on IBM PC-compatible keyboards, if they
 differ:
 (C-) - left or right Ctrl
 (M-) - left Alt
@@ -24,8 +24,8 @@ differ:
 #-------------
 Using READLINE
 
-For newish users, the following are the key bindings for Readline, 
-since by default, neither ~/.inputrc nor environment variable $INPUTRC 
+For newish users, the following are the key bindings for Readline,
+since by default, neither ~/.inputrc nor environment variable $INPUTRC
 would exist.
 
 Search:

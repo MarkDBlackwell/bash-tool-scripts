@@ -1,12 +1,12 @@
 #!/bin/sh
 # Author: Mark D. Blackwell
 # Change dates:
-# (mdb) about November, 2010 - created.
-# (mdb) 3-29-2011
+# (mdb) about November, 2010 - create.
+# (mdb) 3-29-2011 - ?
 # (mdb) 8-04-2011 - parameterize computer name.
-# (mdb) 3-16-2011 - change to smbclient
+# (mdb) 3-16-2011 - change to smbclient.
 
-
+# Samba.
 # Mount a certain Samba filesystem.
 # Usage:
 #   mount-samba <computer name>

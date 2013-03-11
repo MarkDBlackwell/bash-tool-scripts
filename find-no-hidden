@@ -2,7 +2,7 @@
 # Author: Mark D. Blackwell
 # Date written: January(?), 2012
 # Changed:
-# (mdb) 2012-02-07 - added documentation.
+# (mdb) 2012-02-07 - add documentation.
 
 # Find no hidden.
 # Recursively finds, outside hidden directories such as '.git', all (non-directory) files.

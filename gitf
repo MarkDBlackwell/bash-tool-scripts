@@ -2,9 +2,9 @@
 # Author: Mark D. Blackwell
 # Date written: October 29, 2010
 # Change dates:
-# (mdb) March 29, 2011
-# (mdb) August 24, 2011 For Cygwin, change git-diff to git diff.
-# (mdb) September 2, 2012 Rename to gitf.
+# (mdb) March 29, 2011 - create.
+# (mdb) August 24, 2011 - for Cygwin, change git-diff to git diff.
+# (mdb) September 2, 2012 - rename to gitf.
 
 # Git files.
 # Show all files new or modified since the last commit.

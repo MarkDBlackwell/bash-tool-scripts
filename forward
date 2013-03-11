@@ -4,7 +4,7 @@
 # Date last changed: March 29, 2011
 
 # Start forwarding TCP traffic, on input/output port 80, from one fixed IP
-# address to another.
+#   address to another.
 # Usage:
 #   (Change the IP addresses below.)
 #   forward

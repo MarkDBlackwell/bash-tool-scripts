@@ -3,6 +3,7 @@
 # Date written: December 21, 2010
 # Date last changed: March 29, 2011
 
+# Pathname.
 # Find files matching a pathname shell expression.
 # Usage:
 #   pathn <pathname-shell-expression>

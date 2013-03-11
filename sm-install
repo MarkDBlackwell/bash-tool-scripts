@@ -6,8 +6,8 @@
 # Update SeaMonkey in a user directory.
 
 # This is to get a particular old version; normally, SeaMonkey updates itself.
-# This command, and SeaMonkey itself, should not be run as root. If run as 
-# user, your SeaMonkey profile (the files in directory ~/.mozilla) will be 
+# This command, and SeaMonkey itself, should not be run as root. If run as
+# user, your SeaMonkey profile (the files in directory ~/.mozilla) will be
 # writable by your plugins, e.g. Noscript.
 
 # Usage:

@@ -1,0 +1,11 @@
+#!/bin/sh
+# Author: Mark D. Blackwell
+# Change dates:
+# (mdb) 2012-10-29 - create.
+
+# Each.
+# Usage:
+#   each <file containing first arguments> <command> \
+#   <optional second argument>
+
+for arg in `cat $1` ; do $2 $arg $3; done

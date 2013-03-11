@@ -2,12 +2,12 @@
 # Author: Mark D. Blackwell
 # Date written: November 5, 2010
 # Changed:
-# (mdb) 2011-03-29
-# (mdb) 2012-02-03 - exclude directory, 'old'; add optional args; move directory
-# (mdb) 2012-02-07 - move directory back; not use 'regexp='; mention fixed strings; mention -i option
-# (mdb) 2012-08-18 - exclude tmp; add regex example
-# (mdb) 2012-09-09 - improve exclusions
-# (mdb) 2012-12-21 - improve exclusions
+# (mdb) 2011-03-29 - create.
+# (mdb) 2012-02-03 - exclude directory, 'old'; add optional args; move directory.
+# (mdb) 2012-02-07 - move directory back; not use 'regexp='; mention fixed strings; mention -i option.
+# (mdb) 2012-08-18 - exclude tmp; add regex example.
+# (mdb) 2012-09-09 - improve exclusions.
+# (mdb) 2012-12-21 - improve exclusions.
 
 # Grep files.
 # (Global regular expression print.)

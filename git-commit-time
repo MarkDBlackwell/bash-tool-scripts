@@ -2,9 +2,11 @@
 =begin
 Author: Mark D. Blackwell
 Change dates:
-mdb August 7, 2011: created.
+mdb August 7, 2011 - create.
+
+Git commit times.
 Works in Git Bash on Microsoft Windows XP.
-Purpose: 
+Purpose:
 Below the current directory, show all Git repositories' latest commit times.
 Usage example:
   cd develop; git-commit-time
