@@ -1,6 +1,8 @@
 These are GNU Bash scripts, which help in developing software on Debian
 and Cygwin.
 
+Daniel Kehoe added a line to the README as an experiment with branching and pull requests.
+
 They complement Nano, Debian's recommended text editor. Though simple,
 Nano works with multiple files while cutting & pasting, and searching &
 replacing. Like Emacs, it uses Bash-like keyboard shortcuts: see
