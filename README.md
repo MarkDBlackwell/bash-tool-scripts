@@ -3,6 +3,8 @@ and Cygwin.
 
 Daniel Kehoe added a line to the README as an experiment with branching and pull requests.
 
+It's just an experiment so no need to accept the pull request.
+
 They complement Nano, Debian's recommended text editor. Though simple,
 Nano works with multiple files while cutting & pasting, and searching &
 replacing. Like Emacs, it uses Bash-like keyboard shortcuts: see
